@@ -1,1 +1,37 @@
 <h1>Director #<%=params.fetch("director_id")%> details</h1>
+
+<dl> 
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%=@director_name%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%=@director_dob%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%=@director_bio%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%=@director_image%>">
+  </dd>
+</dl>
