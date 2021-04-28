@@ -1,0 +1,26 @@
+<h1>List of all directors</h1>
+<hr>
+
+<table border="1">
+  <%@director_list.each do |display|%>
+    <tr>
+      <td>ID</td>
+      <td>Image</td>
+      <td>Name</td>
+      <td>Dob</td>
+    </tr>
+    <tr>
+      <td><%=display.id%></td>
+      <td>
+        <img src="<%=display.image%>">
+      </td>
+      <td><%=display.name%></td>
+      <td><%=display.dob%></td>
+      <td>
+        <a href="directors/<%=display.id%>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <%end%>
+</table>
