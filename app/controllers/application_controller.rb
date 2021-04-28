@@ -18,4 +18,17 @@ class ApplicationController < ActionController::Base
 
     render({:template => "misc_templates/director_details"})
   end
+
+   def movie_index
+    @movie_list = Movie.all
+
+    render({:template => "misc_templates/movie_index"})
+  end
+
+  def movie_details
+    movie_array = Movie.where({:id => params.fetch("movie_id").to_i}).last
+
+    render({:template => "misc_templates/movie_details"})
+  end
+
 end

@@ -1,0 +1,31 @@
+<h1>List of all movies</h1>
+<hr>
+
+<table border="1">
+    <tr>
+      <td>ID</td>
+      <td>Image</td>
+      <td>Title</td>
+      <td>Year</td>
+      <td>Director</td>
+    </tr>
+  <%@movie_list.each do |display|%>
+    <tr>
+      <td><%=display.id%></td>
+      <td>
+        <img src="<%=display.image%>">
+      </td>
+      <td><%=display.title%></td>
+      <td><%=display.year%></td>
+      <td>
+        <%director_array = Director.where({:id => display.director_id}).last%>
+        <%=director_array.name%>
+      </td>
+      <td>
+        <a href="movies/<%=display.id%>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <%end%>
+</table>
