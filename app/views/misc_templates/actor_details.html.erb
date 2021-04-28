@@ -37,3 +37,26 @@
 </dl>
 
 <hr>
+
+<table border="1">
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Director</th>
+      <th>Character Name</th> 
+      <th></th>
+    </tr>
+    <%@character_array.each do |display|%>
+    <tr>
+      <td><%=Movie.where({:id => display.movie_id}).last.title%></td>
+      <td><%=Movie.where({:id => display.movie_id}).last.year%></td>
+      <td><%=Director.where({:id => Movie.where({:id => display.movie_id})}).last.name%></td>
+      <td><%=display.name%></td>
+      <td>
+        <a href="/movies/<%=Movie.where({:id => display.movie_id}).last.id%>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <%end%>
+</table>
