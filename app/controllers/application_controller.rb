@@ -55,4 +55,12 @@ class ApplicationController < ActionController::Base
     render({:template => "misc_templates/actor_details"})
   end
 
+  def directors_youngest
+    director_list = Director.all
+
+  end
+
+  def directors_oldest
+  end
+
 end
