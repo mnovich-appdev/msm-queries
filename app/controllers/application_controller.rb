@@ -31,4 +31,16 @@ class ApplicationController < ActionController::Base
     render({:template => "misc_templates/movie_details"})
   end
 
+     def actor_index
+    @actor_list = Actor.all
+
+    render({:template => "misc_templates/actor_index"})
+  end
+
+  def actor_details
+    actor_array = Actor.where({:id => params.fetch("movie_id").to_i}).last
+
+    render({:template => "misc_templates/actor_details"})
+  end
+
 end

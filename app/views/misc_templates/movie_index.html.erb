@@ -3,17 +3,18 @@
 
 <table border="1">
     <tr>
-      <td>ID</td>
-      <td>Image</td>
-      <td>Title</td>
-      <td>Year</td>
-      <td>Director</td>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Director</th>
+      <th></th>
     </tr>
   <%@movie_list.each do |display|%>
     <tr>
       <td><%=display.id%></td>
       <td>
-        <img src="<%=display.image%>">
+        <img src="<%=display.image%>" style="width:250px">
       </td>
       <td><%=display.title%></td>
       <td><%=display.year%></td>
@@ -22,7 +23,7 @@
         <%=director_array.name%>
       </td>
       <td>
-        <a href="movies/<%=display.id%>">
+        <a href="/movies/<%=display.id%>">
           Show details
         </a>
       </td>
