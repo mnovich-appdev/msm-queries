@@ -1,0 +1,55 @@
+<h1>Movie #<%=params.fetch("movie_id")%> details</h1>
+
+<dl> 
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%=@movie_title%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Year
+  </dt>
+  <dd>
+    <%=@movie_year%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Duration
+  </dt>
+  <dd>
+    <%=@movie_duration%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%=@movie_desc%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Director
+  </dt>
+  <dd>
+    <%=@movie_director%>
+  </dd>
+</dl>
+
+<dl> 
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%=@movie_image%>">
+  </dd>
+</dl>

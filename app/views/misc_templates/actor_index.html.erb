@@ -9,7 +9,7 @@
       <th>Dob</th>
       <th></th>
     </tr>
-  <%@director_list.each do |display|%>
+  <%@actor_list.each do |display|%>
     <tr>
       <td><%=display.id%></td>
       <td>
@@ -18,7 +18,7 @@
       <td><%=display.name%></td>
       <td><%=display.dob%></td>
       <td>
-        <a href="/directors/<%=display.id%>">
+        <a href="/actors/<%=display.id%>">
           Show details
         </a>
       </td>
