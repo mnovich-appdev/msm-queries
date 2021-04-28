@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
     @director_bio = director_array.bio
     @director_image = director_array.image
 
+    @movie_list = Movie.where({:director_id => params.fetch("director_id")})
+
     render({:template => "misc_templates/director_details"})
   end
 

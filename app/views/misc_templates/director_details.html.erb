@@ -35,3 +35,37 @@
     <img src="<%=@director_image%>">
   </dd>
 </dl>
+
+<hr>
+
+<h1>Filmography</h1>
+
+<table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Director</th> 
+      <th></th>
+    </tr>
+  <%@movie_list.each do |display|%>
+    <tr>
+      <td><%=display.id%></td>
+      <td>
+        <img src="<%=display.image%>" style="width:250px">
+      </td>
+      <td><%=display.title%></td>
+      <td><%=display.year%></td>
+      <td>
+        <%director_array = Director.where({:id => display.director_id}).last%>
+        <%=director_array.name%>
+      </td>
+      <td>
+        <a href="/movies/<%=display.id%>">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <%end%>
+</table>
